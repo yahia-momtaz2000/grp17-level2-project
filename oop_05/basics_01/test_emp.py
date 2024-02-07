@@ -2,7 +2,8 @@ from emp import Emp     # from emp module import Emp class
 
 # main program
 print('---- Take object emp_ahmed from class Emp in module emp ----')
-
+# create new object[new instance ] from the class and initializa the instance by the initial values
+# through the constructor
 emp_ahmed = Emp(101, 'Ahmed Esam', 7000, 'Programmer')
 # emp_ahmed.emp_gross_salary = -8000  # Direct access to attributes   ->>  To Solve this ;; attributes should be private [ no direct access ]
 emp_ahmed.set_emp_gross_salary(8000)
@@ -35,3 +36,7 @@ for employee in emps_list:
     print(f'Emp name = {employee.get_emp_name()}, emp net salary = {employee.calc_monthly_net_salary()}')
     sum = sum + employee.calc_monthly_net_salary()
 print(f'Sum of net salary = {sum}')
+
+
+
+
