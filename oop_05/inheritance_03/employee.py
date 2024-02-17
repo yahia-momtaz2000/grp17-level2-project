@@ -17,7 +17,7 @@ class Employee(Person):
         return self.calc_monthly_net_salary() * 12
 
     def print_person_details(self):
-        super().print_person_details() # call parent method from child method
+        super().print_person_details()  # call parent method from child method
         print(f'Monthly net salary = {self.calc_monthly_net_salary()}')
         print(f'Annual net Salary = {self.calc_annual_net_salary()}')
 
