@@ -1,0 +1,95 @@
+-- retreive all columns from table 
+select * from employees;
+select * from departments;
+
+-- retreive custom columns
+select employee_id, last_name, salary, department_id
+from employees;
+
+-- concatenation | alias ( nick name )
+select employee_id as emp_id, concat(first_name,' is son of ', last_name) as emp_full_name, 
+		salary, department_id
+from employees;
+
+-- arithematic expression  +	-		*		/			|		order by 
+select employee_id, last_name, salary, salary * 12 as annual_salary, department_id
+from employees
+order by department_id asc, salary desc; --  asc ( default )   desc
+
+-- --------------- Filter Restrict Rows --------- ( where condition )  
+-- filter rows by department id = 30			|  Comparison operators :		=		>		<		 >=			<=		!=
+select *
+from employees
+where department_id = 30
+order by salary asc;
+
+-- filter rows by salary >= 14000
+select *
+from employees 
+where salary >= 14000;
+
+-- filter rows by multi conditions [ department_id = 30  and salary >= 6000 ]
+select *
+from employees
+where department_id = 30
+and salary >= 6000;
+
+-- where condition operators [ between - in - like - is null ]
+-- filter employees - show employee_id, last_name, salary, department_id	in range 4000 to 7000 included ; order by salary desc
+select employee_id, last_name, salary, department_id
+from employees
+where salary >= 4000 and salary <= 7000
+order by salary desc;
+
+-- 1.  between operator 
+select employee_id, last_name, salary, department_id
+from employees
+where salary between 4000 and 7000
+order by salary desc;
+
+-- 	-----------------------------------------------
+-- example : filter rows by employees works in departments 30, 60, 90
+select *
+from employees
+where department_id = 30
+or department_id = 60
+or department_id = 90;
+
+-- 2. in operator
+select *
+from employees
+where department_id in (30, 60, 90);
+
+-- ------
+-- 3. is null operator
+-- example : show employees who has no department
+select *
+from employees
+where department_id is null;
+
+select *
+from employees
+where commission_pct is null;
+
+-- ------------- 4. Like 			%    Zero or more letters
+-- example : show employees data with last_name = king
+select *
+from employees
+where last_name = 'King';
+
+-- example : filter employees whose last name start with letter a
+select *
+from employees
+where last_name like 'a%';
+
+
+-- example : filter employees whose last name contains n
+select *
+from employees
+where last_name like '%n%';
+
+-- example : filter employees whose last name ends with n 
+select *
+from employees
+where last_name like '%n';
+

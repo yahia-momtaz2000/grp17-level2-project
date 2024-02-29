@@ -1,0 +1,70 @@
+choose dbms ... [ mysql db ] > workbench ( tool to connect to the db mysql db to write sql code )
+
+> SQL ( Structure Query Language )لغة الاستعلامات       : Build DB Infra -Structure  - Standard Language
+
+	 	> all dbms { Postgresql db | Oracle | Ms. SQL Server | IBM DB2 | My SQL db | Access ... 
+
+
+	1 - SELECT [ retreive data ]
+	2 - DMLS ( INSERT - UPDATE - DELETE ) "data manipulation language"
+	3- TRANSACTION CONTROL ( COMMIT - ROLLBACK )
+
+
+	4- DDLs ( data def. language ) = create - alter - drop - truncate - rename - comment [ auto commit ]
+	5- DCLs : data ctrl language ( grant - revoke ) [ auto commit ]
+
+		==== window functions [ for data analysis ] 
+
+** Retrieving Data :  [ Select ]
+	- SELECT all columns
+	- SELECT CUSTOM columns
+	- Arithematic expressions
+	- Column Aliases
+	- Concatenation
+	- Using Order By
+
+--------------------------
+** Retrieving Data :  [ Select ]
+	- Restricting Rows using Where clause
+	- Comparison Operators  >    <    >=    <=   =   !=  <>
+
+	- Comparison Operators :  Between   IN   Like   Is null
+	- Using Multi Conditions :  AND  OR  NOT
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------
+** SQL Functions : - Aggregate Functions
+	- Sum
+	- Max
+	- Min
+	- Count
+	- Avg
+	- Group By
+	- Having
+
+
+-----------------------------------------------------
+** Join Tables **
+
+-----------------------------------------------------
+** Sub Queries **
+-----------------------------------------------------
+** union
+-----------------------------------------------------
+** Data Manipulations DMLs ** ; transaction control Commit / rollback
+	insert
+	update
+	delete
+
+-----------------------------------------------------
+** Other Schema Objects ** 
+	- db views
+	- index
+
+++++
+
+>>>   Db design
+
+
+>>>> link between python and mysql db
